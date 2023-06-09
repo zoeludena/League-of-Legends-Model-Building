@@ -9,6 +9,7 @@ Our dataset is on all of the professional League of Legends games that have take
 We took this dataset and isolated columns to help us answer our prediction problem. We kept: `"result"`, `"cspm"`, `"goldat10"`, `"xpat10"`, `"goldat15"`, `"xpat15"`, and `"vspm"`. Furthermore, we only kept the summary rows for both the winning and the losing team. Below you can find what these columns mean and the first five rows of our DataFrame.
 
 **First five rows of our cleaned DataFrame:**
+
 |   result |    cspm |   goldat10 |   xpat10 |   goldat15 |   xpat15 |   vspm |
 |---------:|--------:|-----------:|---------:|-----------:|---------:|-------:|
 |        1 | 29.5406 |      14612 |    18745 |      22384 |    29220 | 7.1669 |
@@ -29,7 +30,7 @@ We took this dataset and isolated columns to help us answer our prediction probl
 Our prediction problem is trying to predict whether a team won their game of League of Legends, given only their post game statistics (the two rows corresponding to each team in the DataFrame), excluding the results obviously. Note that we do not include the results of the other team in our analysis, as we want to focus on only this particular team’s statistics. This is a binary classification problem, with the two outcomes being a win or a loss. Our response variable is the “result” column, which is 1 if a team won a game, and 0 otherwise. We chose this because we found predicting the winner of a match the most interesting among the samples at the bottom of the instructions, and the most applicable to our gaming tendencies. We are evaluating our model through accuracy. We did not find the F1-score to be particularly important in this scenario, as there are no repercussions for an imbalanced amount of Type I and Type II errors.
 
 ## Baseline Model
-For our Baseline model we took our cleaned DataFrame and further isolated two features. The features of our model are `"cspm"`, meaning the total creep score per minute, and `"xpat10"`, meaning the xp at 10 minutes. We converted `"xpat10"` to xp gained per minute in a new column called `"xp_10_1"`.
+For our Baseline model we took our cleaned DataFrame and further isolated two features. The features of our model are `"cspm"`, meaning the total creep score per minute, and `"xpat10"`, meaning the xp at 10 minutes. We converted `"xpat10"` to xp gained per minute in a new column called `"xp_10_1"`. Below you will find the first five rows of the data we used in our Baseline Model where we tested `"cspm"` and `"xp_10_1"` and tried to predict `"result"`.
 
 |   result |    cspm |   xp_10_1 |
 |---------:|--------:|----------:|
@@ -49,9 +50,10 @@ The modeling algorithm we chose was a decision tree, as we have a classification
 
 
 ### Features
-The features we added were `"goldat10"`, `"goldat15"`, `"xpat15"` and `"vspm"`. `"goldat10"` and `"goldat15"` is the amount of gold the team had after 10 and 15 minutes respectively, and `"xpat15"` is the amount of xp the team had at the 15 minute mark. `"vspm"` is the vision score per minute, which roughly corresponds to their wards placed and vision control over the map throughout the game.
+The features we added were `"goldat10"`, `"goldat15"`, `"xpat15"` and `"vspm"`. `"goldat10"` and `"goldat15"` is the amount of gold the team had after 10 and 15 minutes respectively, and `"xpat15"` is the amount of xp the team had at the 15 minute mark. `"vspm"` is the vision score per minute, which roughly corresponds to their wards placed and vision control over the map throughout the game. We used all of these columns to help us predict `"result"`.
 
 **Here is what our DataFrame looks like:**
+
 |   result |    cspm |   goldat10 |   xpat10 |   goldat15 |   xpat15 |   vspm |
 |---------:|--------:|-----------:|---------:|-----------:|---------:|-------:|
 |        1 | 29.5406 |      14612 |    18745 |      22384 |    29220 | 7.1669 |
