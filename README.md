@@ -3,6 +3,8 @@ This is a project for DSC80 where we create different models using DecisionTreeC
 
 **Names:** Zoe Ludena and Johel Tutak
 
+If you would like to look at out previous project where we analyzed League of Legends Souls affect on winrate look here: <a href="https://zoeludena.github.io/League-Of-Legends-Soul-Analysis/">League-of-Legends-Soul-Analysis</a>.
+
 ## Cleaning our Data
 Our dataset is on all of the professional League of Legends games that have taken place in 2023. The dataset contains 12 rows per game, one row per player and 2 rows of summary statistics (one for each team). Furthermore, there are over 100 columns of nearly all the data you could collect on a League of Legends match.
 
