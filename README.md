@@ -72,6 +72,8 @@ We chose to include `"goldat10"`, `"goldat15"` and `"xpat15"` as they are all st
 ### Confusion Matrix
 <img src = "assets/ConfusionMatrix.png">
 
+Above is a visualization of our confusion matrix based off of our final model. 1129 represents League of Legends games correctly predicted to lose. 1147 represents League of Legends games correctly predicted to win. This means 519 represents League of Legends games incorrectly predicted to win when they actually lost and 560 represents League of Legends games incorrectly predicted to lose when they actually won.
+
 ### Final Model VS Baseline Model
 Our Final model had an accuracy of roughly 67.84%, which is a roughly a 10% increase from our Baseline model's accuracy of 57.79%. This is a substantial improvement to our baseline, giving us a ⅔ chance to get the correct result. This increase is likely due to access to a wider range of data, allowing for the decision tree to make more accurate decisions based on more variables/information.
 
