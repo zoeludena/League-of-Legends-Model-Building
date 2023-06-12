@@ -80,4 +80,6 @@ Our Final model had an accuracy of roughly 67.84%, which is a roughly a 10% incr
 ## Fairness Analysis
 Our group X is teams that got the dragon soul for that game, and our group Y is teams that did not have dragon soul. Our evaluation metric is whether our classifier’s accuracy is the same between the two groups. The null hypothesis is “Our classifier's accuracy is the same for both if a team had dragon soul or if they did not have dragon soul. Any difference was due to random chance.” The alternative hypothesis is “Our classifier's accuracy is not the same. Its accuracy for if the team had soul was greater than if the team did not have soul.” The test statistic we chose is the difference in accuracy between the two groups, with a significance level of 0.05. Our resulting P-value was 0.682, meaning we failed to reject the null hypothesis, and that any difference between the two groups can be explained by random chance. There is no evidence that the classifier's accuracy is different depending on if the team got soul or did not get soul.
 
+Below you will find a histogram of our test statistic. The red vertical line is our observed accuracy difference and the rest of the histogram is our simulated differences in accuracy for group X and group Y.
+
 <iframe src="assets/permutation.html" width=800 height=600 frameBorder=0></iframe>
